@@ -11,7 +11,7 @@ class User(Base):
     username = Column(String(25), unique=True, index=True)
     email = Column(String(255), unique=True, index=True)
     password = Column(Text,nullable=False)
-    is_staff = Column(Boolean, default=False)  # True if user is staff, False otherwise
+    is_staff = Column(Boolean, default=False)
     is_active = Column(Boolean, default=True)
     orders = relationship("Order", back_populates="user")
 
