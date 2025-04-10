@@ -2,6 +2,7 @@ from typing import Optional
 from fastapi import FastAPI
 from pydantic import BaseModel
 
+
 app = FastAPI()
 
 class signUpModel(BaseModel):
@@ -24,3 +25,17 @@ class signUpModel(BaseModel):
             }
         }
 
+
+
+class LoginModel(BaseModel):
+    username: str
+    password: str
+
+    class Config:
+        orm_mode = True
+        schema_extra = {
+            "example": {
+                "username": "juste_monace",
+                "password": "password123"
+            }
+        }

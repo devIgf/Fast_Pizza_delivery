@@ -1,1 +1,9 @@
 env/Scripts/activate
+
+pip freeze > requirements.txt
+
+pour générer un mot de passe hashé 
+- rentrer dans le terminal 
+- executer "python"
+- import secrets
+- secrets.token_hex()
